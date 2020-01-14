@@ -1,8 +1,6 @@
 import feedparser
 from flask import Flask
 
-BBC_FEED = ""
-
 app = Flask(__name__)
 
 RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
