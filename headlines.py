@@ -12,9 +12,8 @@ RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
 @app.route("/<publication>")
 def get_news(publication="bbc"):
     feed = feedparser.parse(RSS_FEEDS[publication])
-    first_article = feed['entries'][0]
     data = {
-        'article': first_article
+        'articles': feed['entries']
     }
 
     return render_template('home.html', **data)
