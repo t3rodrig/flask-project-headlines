@@ -20,6 +20,7 @@ def get_news(publication="bbc"):
         <i>{first_article.get('published')}</i> <br>
         <p>{first_article.get('summary')}</p> <br>
     </body>
+    </html>
     """
 
 if __name__ == "__main__":
